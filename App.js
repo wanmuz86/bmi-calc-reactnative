@@ -7,6 +7,7 @@ export default function App() {
   const [bmi, setBmi] = useState(0)
   const [indicator, setIndicator] = useState('')
   const calculateBmi = () => {
+    Keyboard.dismiss()
     let bmic = weight / ((height/100)**2)
     setBmi(bmic.toFixed(1))
     if (bmic < 18){
